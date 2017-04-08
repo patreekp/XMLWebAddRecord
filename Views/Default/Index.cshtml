@@ -1,0 +1,21 @@
+﻿@using Patacchiola.Patrik._5h.XMLWebAddRecord.Models;
+@using System.Xml.Linq;
+@model IEnumerable<Persona>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-hover">
+    @{ foreach (Persona p in Model)
+        {
+            <tr @p.Stato>
+                <td>@p.Nome</td>
+                <td>@p.Cognome</td>
+            </tr>
+        }
+    }
+</table>
+@Html.ActionLink("Aggiungi Persona", "AggiungiPersona")

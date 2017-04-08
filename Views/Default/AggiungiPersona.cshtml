@@ -1,0 +1,30 @@
+﻿
+@using Patacchiola.Patrik._5h.XMLWebAddRecord.Models;
+@model Persona
+@{
+    ViewBag.Title = "AggiungiPersona";
+}
+
+<h2>AggiungiPersona</h2>
+
+@using (Html.BeginForm("Salva", "Default", FormMethod.Post, htmlAttributes: new { @name = "frmVisualizzaPersona" }))
+{
+    <div class="form-group">
+        <label class="contol-label">Nome</label><br>
+        <input type="text" name="txtNome" id="txtNome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="contol-label">Cognome</label><br>
+        <input type="text" name="txtCognome" id="txtCognome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="contol-label">Stato</label><br>
+        <select name="cmbStato" class="form-control">
+            <option>Iscritto</option>
+            <option>Non iscritto</option>
+        </select>
+    </div>
+        <div class="form-group">
+            <input type="submit" name="submitButton" value="Invia Dati" class="form-control" />
+        </div>
+}
